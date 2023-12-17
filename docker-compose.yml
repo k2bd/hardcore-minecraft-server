@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  hardcore-mc:
+    image: itzg/minecraft-server
+    container_name: hardcore-mc
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      SERVER_NAME: "Kevin's Hardcore Minecraft Server"
+      FORCE_GAMEMODE: "true"
+      MODE: "survival"
+      HARDCORE: "true"
+      DIFFICULTY: "hard"
+      MOTD: "Kevin's Hardcore Minecraft Server: Death = Ban"
